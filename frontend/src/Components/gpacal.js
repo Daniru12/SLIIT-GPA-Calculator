@@ -101,20 +101,29 @@ function GpaCalculator() {
                                     />
                                 </div>
                                 <div className="col-span-3">
-                                    <input
-                                        type="number"
-                                        min="1"
-                                        max="6"
-                                        className="w-full bg-[#1A0B2E] border border-purple-900/50 rounded-md px-4 py-2 text-white focus:outline-none focus:border-purple-500"
-                                        value={credits}
-                                        onChange={(e) => {
-                                            const value = parseInt(e.target.value);
-                                            if (!isNaN(value) && value >= 1 && value <= 6) {
-                                                setCredits(e.target.value);
-                                            }
-                                        }}
-                                    />
-                                </div>
+    <input
+        type="text" // Use text to fully control the input behavior
+        className="w-full bg-[#1A0B2E] border border-purple-900/50 rounded-md px-4 py-2 text-white focus:outline-none focus:border-purple-500"
+        value={credits}
+        onKeyPress={(e) => {
+            // Allow only numeric characters
+            if (!/[0-9]/.test(e.key)) {
+                e.preventDefault();
+            }
+        }}
+        onChange={(e) => {
+            // Parse the input value and ensure it's a number within the valid range
+            const value = parseInt(e.target.value, 10);
+            if (!isNaN(value) && value >= 1 && value <= 6) {
+                setCredits(value);
+            } else if (e.target.value === "") {
+                setCredits("");
+            }
+        }}
+        placeholder="Enter credits (1-6)" // Optional placeholder
+    />
+</div>
+
                                 <div className="col-span-2">
                                     <select
                                         className="w-full bg-[#1A0B2E] border border-purple-900/50 rounded-md px-4 py-2 text-white focus:outline-none focus:border-purple-500"
