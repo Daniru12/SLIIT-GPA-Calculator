@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/SLIIT-GPA-Calculator/static/css/main.897b8f46.css",
-    "main.js": "/SLIIT-GPA-Calculator/static/js/main.f8acf9ad.js",
+    "main.js": "/SLIIT-GPA-Calculator/static/js/main.6caa347a.js",
     "index.html": "/SLIIT-GPA-Calculator/index.html",
     "main.897b8f46.css.map": "/SLIIT-GPA-Calculator/static/css/main.897b8f46.css.map",
-    "main.f8acf9ad.js.map": "/SLIIT-GPA-Calculator/static/js/main.f8acf9ad.js.map"
+    "main.6caa347a.js.map": "/SLIIT-GPA-Calculator/static/js/main.6caa347a.js.map"
   },
   "entrypoints": [
     "static/css/main.897b8f46.css",
-    "static/js/main.f8acf9ad.js"
+    "static/js/main.6caa347a.js"
   ]
 }
