@@ -67,7 +67,7 @@ function GpaCalculator() {
             <div className="max-w-7xl mx-auto">
                 <header className="text-center mb-12">
                     <div className="flex justify-center items-center gap-3 mb-4">
-                    <img src="https://i.postimg.cc/2ycFb0v7/SLIIT-Logo-Crest.png" alt="SLIIT Logo Crest" width="50" height="auto"/>
+                        <img src="https://i.postimg.cc/2ycFb0v7/SLIIT-Logo-Crest.png" alt="SLIIT Logo Crest" width="50" height="auto" />
 
                         <h1 className="text-3xl font-bold tracking-tight">SLIIT GPA Calculator</h1>
                     </div>
@@ -88,7 +88,7 @@ function GpaCalculator() {
                                 <div class="text-xs ml-1 sm:text-sm font-semibold text-purple-300 text-center">Module Name</div>
                                 <div class="text-xs sm:text-sm font-semibold text-purple-300 text-center">Credits</div>
                                 <div class="text-xs sm:text-sm font-semibold text-purple-300 text-center">Grade</div>
-                                </div>
+                            </div>
                             <div className="grid grid-cols-12 gap-4">
                                 <div className="col-span-6">
                                     <input
@@ -101,28 +101,28 @@ function GpaCalculator() {
                                     />
                                 </div>
                                 <div className="col-span-3">
-    <input
-        type="text" // Use text to fully control the input behavior
-        className="w-full bg-[#1A0B2E] border border-purple-900/50 rounded-md px-4 py-2 text-white focus:outline-none focus:border-purple-500"
-        value={credits}
-        onKeyPress={(e) => {
-            // Allow only numeric characters
-            if (!/[0-9]/.test(e.key)) {
-                e.preventDefault();
-            }
-        }}
-        onChange={(e) => {
-            // Parse the input value and ensure it's a number within the valid range
-            const value = parseInt(e.target.value, 10);
-            if (!isNaN(value) && value >= 1 && value <= 6) {
-                setCredits(value);
-            } else if (e.target.value === "") {
-                setCredits("");
-            }
-        }}
-        placeholder="Enter credits (1-6)" // Optional placeholder
-    />
-</div>
+                                    <input
+                                        type="text" // Use text to fully control the input behavior
+                                        className="w-full bg-[#1A0B2E] border border-purple-900/50 rounded-md px-4 py-2 text-white focus:outline-none focus:border-purple-500"
+                                        value={credits}
+                                        onKeyPress={(e) => {
+                                            // Allow only numeric characters
+                                            if (!/[0-9]/.test(e.key)) {
+                                                e.preventDefault();
+                                            }
+                                        }}
+                                        onChange={(e) => {
+                                            // Parse the input value and ensure it's a number within the valid range
+                                            const value = parseInt(e.target.value, 10);
+                                            if (!isNaN(value) && value >= 1 && value <= 6) {
+                                                setCredits(value);
+                                            } else if (e.target.value === "") {
+                                                setCredits("");
+                                            }
+                                        }}
+                                        placeholder="Enter credits (1-6)" // Optional placeholder
+                                    />
+                                </div>
 
                                 <div className="col-span-2">
                                     <select
